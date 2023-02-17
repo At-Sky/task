@@ -1,6 +1,7 @@
 .card {
   padding: 30px;
   max-width: 332px;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, auto);
@@ -176,6 +177,28 @@
 
     svg path, svg circle{
       transition: all .3s ease-in-out;
+    }
+
+    @media (max-width: 1000px) {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      position: unset;
+    }
+
+    @media (max-width: 630px) {
+      position: absolute;
+    }
+
+    @media (max-width: 500px) {
+      position: unset;
+    }
+
+    @media (max-width: 320px) {
+      position: absolute;
     }
   }
 }
