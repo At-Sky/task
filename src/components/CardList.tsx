@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/CardList.module.scss"
-import useData from "@/pages/hooks/useData";
-import Card from "@/pages/components/Card";
+import useData from "@/hooks/useData";
+import Card from "@/components/Card";
 
 function CardList(): JSX.Element {
     const [prods, setProds] = useState<any>(null);

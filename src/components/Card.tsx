@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import styles from "@/styles/Card.module.scss"
 import Image from "next/image"
-import Star from "@/pages/components/Star";
-import Favorite from "@/pages/components/Favorite";
+import Star from "@/components/Star";
+import Favorite from "@/components/Favorite";
 
 interface ICard {
     prodObj: IProd;
