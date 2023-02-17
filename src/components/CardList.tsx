@@ -4,18 +4,18 @@ import useData from "@/hooks/useData";
 import Card from "@/components/Card";
 
 function CardList(): JSX.Element {
-    const [prods, setProds] = useState<any>(null);
-    //const { data:prods } = useData('https://fakestoreapi.com/products')
+    //const [prods, setProds] = useState<any>(null);
+    const { data:prods } = useData('https://fakestoreapi.com/products')
 
-    useEffect(() => {
-        const fetchData = async() => {
-            const response = await fetch('https://fakestoreapi.com/products');
-            const data = await response.json();
-            setProds(data);
-        };
-
-        fetchData()
-    }, []);
+    // useEffect(() => {
+    //     const fetchData = async() => {
+    //         const response = await fetch('https://fakestoreapi.com/products');
+    //         const data = await response.json();
+    //         setProds(data);
+    //     };
+    //
+    //     fetchData()
+    // }, []);
     
 
     return (
