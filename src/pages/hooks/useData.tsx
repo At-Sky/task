@@ -3,14 +3,14 @@ import {useState, useEffect} from "react"
 const useData = (url: string): {data: Array<{}>} => {
     const [state, setState] = useState([]);
 
+    const dataFetch = async () => {
+        const data = await (await fetch(url)).json();
+
+        setState(data);
+    };
+
     useEffect(() => {
-        const dataFetch = async () => {
-            const data = await (await fetch(url)).json();
-
-            setState(data);
-        };
-
-        dataFetch();
+        dataFetch()
     }, [url]);
 
     return { data: state };
