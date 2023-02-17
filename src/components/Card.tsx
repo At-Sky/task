@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState } from "react";
 import styles from "@/styles/Card.module.scss"
 import Image from "next/image"
 import Star from "@/components/Star";
@@ -27,6 +27,7 @@ export default function Card({prodObj}: ICard): JSX.Element {
     let [likeState, setLikeState] = useState(false);
     let [counter, setCounter] = useState(1);
     let rating: React.ReactNode[] = [];
+
 
     for (let i = 0; i < 5; i++) {
         if(i <= Math.trunc(prodObj.rating!.rate)) {
